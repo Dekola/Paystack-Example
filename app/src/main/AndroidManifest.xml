@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".GetResponseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,9 @@
 
         <meta-data
             android:name="co.paystack.android.PublicKey"
-            android:value="pk_test_56c1677577bec246c5eac4e3241479c6a43223bc"/>
+            android:value="pk_test_56c1677577bec246c5eac4e3241479c6a43223bc" />
 
+        <!--<activity android:name=".GetResponseActivity"></activity>-->
     </application>
 
 </manifest>
