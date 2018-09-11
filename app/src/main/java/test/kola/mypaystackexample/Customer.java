@@ -1,20 +1,35 @@
 
 package test.kola.mypaystackexample;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Customer {
 
+    @SerializedName("id")
+    @Expose
     private Integer id;
-    private Object firstName;
-    private Object lastName;
+    @SerializedName("first_name")
+    @Expose
+    private String firstName;
+    @SerializedName("last_name")
+    @Expose
+    private String lastName;
+    @SerializedName("email")
+    @Expose
     private String email;
+    @SerializedName("customer_code")
+    @Expose
     private String customerCode;
+    @SerializedName("phone")
+    @Expose
     private Object phone;
+    @SerializedName("metadata")
+    @Expose
     private Object metadata;
+    @SerializedName("risk_action")
+    @Expose
     private String riskAction;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public Integer getId() {
         return id;
@@ -24,19 +39,19 @@ public class Customer {
         this.id = id;
     }
 
-    public Object getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(Object firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public Object getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(Object lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
@@ -78,14 +93,6 @@ public class Customer {
 
     public void setRiskAction(String riskAction) {
         this.riskAction = riskAction;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

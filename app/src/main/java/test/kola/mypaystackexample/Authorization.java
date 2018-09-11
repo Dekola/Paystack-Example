@@ -1,24 +1,47 @@
 
 package test.kola.mypaystackexample;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Authorization {
 
+    @SerializedName("authorization_code")
+    @Expose
     private String authorizationCode;
+    @SerializedName("bin")
+    @Expose
     private String bin;
+    @SerializedName("last4")
+    @Expose
     private String last4;
+    @SerializedName("exp_month")
+    @Expose
     private String expMonth;
+    @SerializedName("exp_year")
+    @Expose
     private String expYear;
+    @SerializedName("channel")
+    @Expose
     private String channel;
+    @SerializedName("card_type")
+    @Expose
     private String cardType;
+    @SerializedName("bank")
+    @Expose
     private String bank;
+    @SerializedName("country_code")
+    @Expose
     private String countryCode;
+    @SerializedName("brand")
+    @Expose
     private String brand;
+    @SerializedName("reusable")
+    @Expose
     private Boolean reusable;
+    @SerializedName("signature")
+    @Expose
     private String signature;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public String getAuthorizationCode() {
         return authorizationCode;
@@ -114,14 +137,6 @@ public class Authorization {
 
     public void setSignature(String signature) {
         this.signature = signature;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

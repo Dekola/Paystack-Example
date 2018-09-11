@@ -4,24 +4,24 @@ package test.kola.mypaystackexample;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class PayStackResponse {
+public class History {
 
-    @SerializedName("status")
+    @SerializedName("type")
     @Expose
-    private Boolean status;
+    private String type;
     @SerializedName("message")
     @Expose
     private String message;
-    @SerializedName("data")
+    @SerializedName("time")
     @Expose
-    private Data data;
+    private Integer time;
 
-    public Boolean getStatus() {
-        return status;
+    public String getType() {
+        return type;
     }
 
-    public void setStatus(Boolean status) {
-        this.status = status;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getMessage() {
@@ -32,12 +32,12 @@ public class PayStackResponse {
         this.message = message;
     }
 
-    public Data getData() {
-        return data;
+    public Integer getTime() {
+        return time;
     }
 
-    public void setData(Data data) {
-        this.data = data;
+    public void setTime(Integer time) {
+        this.time = time;
     }
 
 }

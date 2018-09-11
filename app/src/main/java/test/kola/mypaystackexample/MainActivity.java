@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         PaystackSdk.chargeCard(this, charge, new Paystack.TransactionCallback() {
             @Override
             public void onSuccess(Transaction transaction) {
-                Toast.makeText(getApplicationContext(), " : onSuccess", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), " : onSuccess", Toast.LENGTH_SHORT).show();
                 Log.i("mytoken",  transaction.getReference());
             }
 

@@ -1,34 +1,77 @@
 
 package test.kola.mypaystackexample;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Data {
 
+    @SerializedName("id")
+    @Expose
     private Integer id;
+    @SerializedName("domain")
+    @Expose
     private String domain;
+    @SerializedName("status")
+    @Expose
     private String status;
+    @SerializedName("reference")
+    @Expose
     private String reference;
+    @SerializedName("amount")
+    @Expose
     private Integer amount;
+    @SerializedName("message")
+    @Expose
     private Object message;
+    @SerializedName("gateway_response")
+    @Expose
     private String gatewayResponse;
+    @SerializedName("paid_at")
+    @Expose
     private String paidAt;
+    @SerializedName("created_at")
+    @Expose
     private String createdAt;
+    @SerializedName("channel")
+    @Expose
     private String channel;
+    @SerializedName("currency")
+    @Expose
     private String currency;
-    private Object ipAddress;
+    @SerializedName("ip_address")
+    @Expose
+    private String ipAddress;
+    @SerializedName("metadata")
+    @Expose
     private Integer metadata;
-    private Object log;
+    @SerializedName("log")
+    @Expose
+    private Log log;
+    @SerializedName("fees")
+    @Expose
     private Integer fees;
+    @SerializedName("fees_split")
+    @Expose
     private Object feesSplit;
+    @SerializedName("authorization")
+    @Expose
     private Authorization authorization;
+    @SerializedName("customer")
+    @Expose
     private Customer customer;
-    private Object plan;
+    @SerializedName("plan")
+    @Expose
+    private String plan;
+    @SerializedName("transaction_date")
+    @Expose
     private String transactionDate;
+    @SerializedName("plan_object")
+    @Expose
     private PlanObject planObject;
+    @SerializedName("subaccount")
+    @Expose
     private Subaccount subaccount;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public Integer getId() {
         return id;
@@ -118,11 +161,11 @@ public class Data {
         this.currency = currency;
     }
 
-    public Object getIpAddress() {
+    public String getIpAddress() {
         return ipAddress;
     }
 
-    public void setIpAddress(Object ipAddress) {
+    public void setIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
     }
 
@@ -134,11 +177,11 @@ public class Data {
         this.metadata = metadata;
     }
 
-    public Object getLog() {
+    public Log getLog() {
         return log;
     }
 
-    public void setLog(Object log) {
+    public void setLog(Log log) {
         this.log = log;
     }
 
@@ -174,11 +217,11 @@ public class Data {
         this.customer = customer;
     }
 
-    public Object getPlan() {
+    public String getPlan() {
         return plan;
     }
 
-    public void setPlan(Object plan) {
+    public void setPlan(String plan) {
         this.plan = plan;
     }
 
@@ -204,14 +247,6 @@ public class Data {
 
     public void setSubaccount(Subaccount subaccount) {
         this.subaccount = subaccount;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

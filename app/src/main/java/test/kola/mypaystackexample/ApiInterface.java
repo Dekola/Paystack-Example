@@ -2,9 +2,9 @@ package test.kola.mypaystackexample;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
+import retrofit2.http.Header;
 
 public interface ApiInterface {
-    @GET("/")
-    Call<PayStackResponse> getResponse(@Query("Authorization") String s);
+    @GET("transaction/verify/ChargedFromAndroid_1536150957523/")
+    Call<PayStackResponse> getResponse(@Header("Authorization") String s);
 }
